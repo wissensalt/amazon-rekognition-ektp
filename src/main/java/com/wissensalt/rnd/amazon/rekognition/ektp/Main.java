@@ -29,11 +29,11 @@ import java.util.List;
  **/
 public class Main {
     public static void main(String[] args) {
-        String accessKey = "AKIAT6A3E7W4IPYD7SMM";
-        String secretKey = "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";
+        String accessKey = "";
+        String secretKey = "";
 
-        String image = "contoh-ektp.jpeg";
-        String bucket = "tripoin-pos-bucket-1";
+        String image = "";
+        String bucket = "";
 
         AWSStaticCredentialsProvider credentialsProvider = getAWSCredential(accessKey, secretKey);
         try {
