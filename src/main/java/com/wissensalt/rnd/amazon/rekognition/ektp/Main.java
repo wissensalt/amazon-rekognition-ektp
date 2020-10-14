@@ -15,6 +15,8 @@ package com.wissensalt.rnd.amazon.rekognition.ektp;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.regions.Region;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
 import com.amazonaws.services.rekognition.model.*;
@@ -27,11 +29,11 @@ import java.util.List;
  **/
 public class Main {
     public static void main(String[] args) {
-        String accessKey = "";
-        String secretKey = "";
+        String accessKey = "AKIAT6A3E7W4IPYD7SMM";
+        String secretKey = "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";
 
-        String image = "";
-        String bucket = "";
+        String image = "contoh-ektp.jpeg";
+        String bucket = "tripoin-pos-bucket-1";
 
         AWSStaticCredentialsProvider credentialsProvider = getAWSCredential(accessKey, secretKey);
         try {
@@ -63,6 +65,7 @@ public class Main {
         return AmazonRekognitionClientBuilder
                 .standard()
                 .withCredentials(awsStaticCredentialsProvider)
+                .withRegion(Regions.AP_SOUTHEAST_1)
                 .build();
     }
 
